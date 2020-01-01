@@ -27,3 +27,7 @@ var questions = [
 ];
 
 var score = 0;
+
+for (var i = 0; i < questions.length; i++) {
+    response = 
+}
