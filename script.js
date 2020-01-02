@@ -101,6 +101,7 @@ function checkAnswer(answer) {
     if (answer == questions[runningQuestion].answer) {
         answerIsCorrect();
         score++
+        console.log(score)
     }
     else {
         answerIsWrong()
@@ -114,6 +115,13 @@ function checkAnswer(answer) {
         clearInterval(TIMER);
         showScore();
     }
+    
+}
+
+function showScore() {
+    scoreDiv.style.display = "block"
+    var scorePerCent = Math.round(100 * (score / questions.length));
+    scoreDiv.innerHTML = "<p>" + scorePerCent + "%</p>";
 
 }
 
@@ -129,14 +137,5 @@ start.addEventListener("click", startQuiz);
 choiceA.addEventListener("click", checkAnswer);
 choiceB.addEventListener("click", checkAnswer);
 choiceC.addEventListener("click", checkAnswer);
-
-// //for (var i = 0; i < questions.length; i++) {
-    //   //  response = 
-    // //}
+choiceD.addEventListener("click", checkAnswer);
     
-function showScore() {
-    scoreDiv.style.display = "block"
-    var scorePerCent = Math.round(100 * score / questions.length);
-    scoreDiv.innerHTML += "<p>" + scorePerCent + "%</p>";
-
-}
