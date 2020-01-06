@@ -8,6 +8,7 @@
     <title>Quiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <div id="container">
@@ -20,10 +21,10 @@
       <div id="question"> </div>
       <div id="qImage"></div>
       <div id="choices">
-        <button class="choice" id="A"><span id="1"></span></button> <br>
-        <button class="choice" id="B"><span id="2"></span></button> <br>
-        <button class="choice" id="C"><span id="3"></span></button> <br>
-        <button class="choice" id="D"><span id="4"></span></button> <br>
+        <button class="choice" id="A"><span id="1">Jack</span></button> <br>
+        <button class="choice" id="B"><span id="2">is</span></button> <br>
+        <button class="choice" id="C"><span id="3">awesome</span></button> <br>
+        <button class="choice" id="D"><span id="4">dude</span></button> <br>
       </div>
       </div>
       <div id="timer">
@@ -36,6 +37,14 @@
   </div>
   </div>
     <div id="score" style = "display: none;">
+      <h2>Congratulations! You have finished the quiz! Your score is:</h2>
+      <h5 id="insertScore"></h5>
+      <form>
+        Insert your initials here:<br>
+        <input type="text" name="initials" id="initial">
+      </form>
+      <br>
+      <button id="highScore">Enter Highscore</button>
     </div>
     </div>
     <script src="./script.js"></script>
